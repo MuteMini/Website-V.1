@@ -1,0 +1,45 @@
+a#open{
+    background-color: transparent;
+    color:#ECB390; 
+    display: block;
+    text-decoration: none;
+    font-size:75px;
+    margin-left:20px;
+    transition: color 0.5s;
+}
+a#open:hover{
+    color:#EB9B6A;
+}
+nav{
+    background-color: #3C3C3C;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: fixed;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: width 0.5s;
+}
+nav a{
+    font-size:25px;
+    top: 20;
+    color:#FCF8E8;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 5px 0px 5px 20px;
+    transition: color 0.3s;
+}
+nav a#close{
+    font-size:75px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+} 
+nav a:hover{
+    color:#FFF1B9;
+    text-decoration: none;
+}
