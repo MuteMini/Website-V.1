@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Min Kang's Online Portfolio</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            // using tutorial from https://www.tutorialspoint.com/How-to-load-external-HTML-into-a-div-using-jQuery
+            //                 and https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file
+            $(document).ready(function(){
+                $("#include-nav").load("nav.html", function(){ alert("loaded");} );
+            });
+        </script>
+    </head>
+    <body>
+        <div id="include-nav"></div>
+    </body>
+</html>
