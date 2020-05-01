@@ -3,22 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Min Kang's Online Portfolio</title>
-        <script src="scripts/jquery.js"></script>
-        <script>
-            // using tutorial from https://www.tutorialspoint.com/How-to-load-external-HTML-into-a-div-using-jQuery
-            //                 and https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file
-            $(function(){
-                dataType: "jsonp",
-                $("#include-nav").load("nav.html", function(responseTxt, statusTxt, xhr){
-                    if(statusTxt == "success")
-                        alert("External content loaded successfully!");
-                    if(statusTxt == "error")
-                        alert("Error: " + xhr.status + ": " + xhr.statusText);
-                });
-            });
-        </script>
+        <link rel="stylesheet" type="text/css" href="styles/navbar.css">
     </head>
     <body>
-        <div id="include-nav"></div>
+        <div class="navbar">
+            <!-- Sidebar learned from https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+            <a onclick="openNav()" href="javascript:void(0)" id="open">&equiv;</a>
+            <nav id="sidenav">
+                <a onclick="closeNav()" href="javascript:void(0)" id="close">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="tutorialMain.html">Tutorials</a>
+            </nav> 
+            <script>
+                function openNav() {
+                    document.getElementById("sidenav").style.width = "250px";
+                }
+                function closeNav() {
+                    document.getElementById("sidenav").style.width = "0";
+                }
+            </script>
+        </div>
     </body>
 </html>
