@@ -1,6 +1,7 @@
 // Sidebar learned from https://www.w3schools.com/howto/howto_js_sidenav.asp
 // learned document.write from https://stackoverflow.com/a/15250208
-document.write('\
+
+const code = '\
 <a onclick="openNav()" href="javascript:void(0)" id="open">&equiv;</a>\
 <nav id="sidenav">\
     <a onclick="closeNav()" href="javascript:void(0)" id="close">&times;</a>\
@@ -17,4 +18,8 @@ document.write('\
         document.getElementById("sidenav").style.width = "0";\
     }\
 </script>\
-');
+';
+
+$(document).ready(function(){
+    $( "#include-nav" ).html( code );
+});
