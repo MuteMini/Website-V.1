@@ -1,5 +1,5 @@
 // Sidebar learned from https://www.w3schools.com/howto/howto_js_sidenav.asp
-// learned document.write from https://stackoverflow.com/a/15250208
+// learned jQuery and its html function from https://api.jquery.com/html/
 
 const code = '\
 <a onclick="openNav()" href="javascript:void(0)" id="open">&equiv;</a>\
