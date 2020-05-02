@@ -5,10 +5,10 @@ const code = '\
 <a onclick="openNav()" href="javascript:void(0)" id="open">&equiv;</a>\
 <nav id="sidenav">\
     <a onclick="closeNav()" href="javascript:void(0)" id="close">&times;</a>\
-    <a href="index.html">Home</a>\
-    <a href="about.html">About Me</a>\
-    <a href="projects.html">Projects</a>\
-    <a href="tutorialMain.html">Tutorials</a>\
+    <a href="index.html" id="index">Home</a>\
+    <a href="about.html" id="about">About Me</a>\
+    <a href="projects.html" id="project">Projects</a>\
+    <a href="tutorialMain.html" id="tutorialMain">Tutorials</a>\
 </nav>\
 <script>\
     function openNav() {\
