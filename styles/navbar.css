@@ -10,6 +10,12 @@ a#open{
 a#open:hover{
     color:#EB9B6A;
 }
+a#open:visited{
+    color:#EB9B6A;
+}
+a#open:active{
+    color:#EB9B6A;
+}
 nav{
     background-color: #3C3C3C;
     height: 100%;
@@ -41,5 +47,10 @@ nav a#close{
 } 
 nav a:hover{
     color:#FFF1B9;
-    text-decoration: none;
+}
+a#open:visited{
+    color:#FFF1B9;
+}
+nav a:active{
+    color:#ECB390;
 }
