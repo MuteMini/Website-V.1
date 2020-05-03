@@ -9,6 +9,28 @@ const code = '\
     <a href="about.html" id="about">About Me</a>\
     <a href="projects.html" id="project">Projects</a>\
     <a href="tutorialMain.html" id="tutorialMain">Tutorials</a>\
+    <footer>\
+        <!-- Took inspiration from Erics website, uses two photos, hover, and opacity -->\
+        <a href="https://dmoj.ca/user/MuteMini">\
+            <div class="social">\
+                <img class="idle" alt=DMOJ src="images/dmoj1.png">\
+                <img class="active" alt=DMOJ src="images/dmoj2.png">\
+            </div>\
+        </a>\
+        <a href="https://github.com/MuteMini">\
+            <div class="social">\
+                <img class="idle" alt=GITHUB src="images/github1.png">\
+                <img class="active" alt=GITHUB src="images/github2.png">\
+            </div>\
+        </a>\
+        <a href="mailto:therealminhere@gmail.com">\
+            <div class="social">\
+                <img class="idle" alt=EMAIL src="images/email1.png">\
+                <img class="active" alt=EMAIL src="images/email2.png">\
+            </div>\
+        </a>\
+        <p> &copy; 2020 Min Kang </p>\
+    </footer>\
 </nav>\
 <script>\
     function openNav() {\
