@@ -1,12 +1,14 @@
 /*
 ORDER OF PROPERTIES (* is the property name)
 
+backgrounds
 colors
 display*, overlay*, visibility*, etc.
+flex stuff
 width*, height*
 position*
 positioning (top, bottom, etc)
-margine, border, paddings
+margin, border, paddings
 font (size, family, etc) 
 text
 extraneous
@@ -17,7 +19,7 @@ a#open{
     color: #ECB390; 
     display: block;
     position: absolute;
-    top: 7px;
+    top: 0;
     left: 30px;
     font-size: 75px;
     text-decoration: none;
@@ -67,9 +69,10 @@ nav a:active{
 }
 
 nav footer{
+    background-color: #3C3C3C;
     width: 300px;
     position: absolute;
-    bottom: 120px;
+    bottom: 50px;
     left: -22px;
     padding: 20px 0px;
     overflow: hidden;
