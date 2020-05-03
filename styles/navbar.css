@@ -3,11 +3,11 @@ ORDER OF PROPERTIES (* is the property name)
 
 colors
 display*, overlay*, visibility*, etc.
-positioning (top, bottom, etc)
 width*, height*
 position*
+positioning (top, bottom, etc)
 margine, border, paddings
-font
+font (size, family, etc) 
 text
 extraneous
 transition
@@ -16,7 +16,9 @@ a#open{
     background-color: transparent;
     color: #ECB390; 
     display: block;
-    margin-left:20px;
+    position: absolute;
+    top: 7px;
+    left: 30px;
     font-size: 75px;
     text-decoration: none;
     transition: color 0.5s;
@@ -33,7 +35,7 @@ nav{
     top: 0;
     left: 0;
     padding-top: 60px;
-    font-family: "Jost", Courier, monospace;
+    font-family: Jost, Geneva, monospace;
     z-index: 1;
     overflow-x: hidden;
     transition: width 0.5s;
@@ -44,6 +46,7 @@ nav a{
     top: 0;
     padding: 5px 0px 5px 20px;
     font-size: 25px;
+    font-weight: 300;
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.3s;
@@ -63,7 +66,7 @@ nav a:active{
     transition: color 0s;
 }
 
-footer{
+nav footer{
     width: 300px;
     position: absolute;
     bottom: 120px;
@@ -71,17 +74,17 @@ footer{
     padding: 20px 0px;
     overflow: hidden;
 }
-footer a{
+nav footer a{
     display: inline;
     margin: 5px;
     padding-left: 4px;
 }
-footer .social{
+nav footer .social{
     display: inline;
     position: relative;
     padding: 30px;
 }
-footer .social img{
+nav footer .social img{
     display: inline-block;
     width: auto;
     height: 50px;
@@ -89,9 +92,10 @@ footer .social img{
     top: 15px;
     left: 30px;
 }
-footer p{
+nav footer p{
     color: #FCF8E8;
     position: relative;
+    font-weight: 200;
     text-align: center;
 }
 
@@ -104,9 +108,9 @@ footer p{
     transition-duration: .3s, .5s, .2s, .2s;
     transition-timing-function: ease;
 }
-footer .social:hover .idle{ opacity: 0; }
-footer .social:hover .active{ opacity: 100; }
-footer .social:hover .idle, footer .social:hover .active{
+nav footer .social:hover .idle{ opacity: 0; }
+nav footer .social:hover .active{ opacity: 100; }
+nav footer .social:hover .idle, footer .social:hover .active{
     height: 58px;
     top: 11px;
     left: 26px;
