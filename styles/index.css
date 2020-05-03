@@ -1,3 +1,19 @@
+/*
+ORDER OF PROPERTIES (* is the property name)
+
+backgrounds
+colors
+display*, overlay*, visibility*, etc.
+flex stuff
+width*, height*
+position*
+positioning (top, bottom, etc)
+margin, border, paddings
+font (size, family, etc) 
+text
+extraneous
+transition
+*/
 nav a#index{
     color:#ECB390;
 }
