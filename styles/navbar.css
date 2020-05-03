@@ -1,66 +1,80 @@
+/*
+ORDER OF PROPERTIES (* is the property name)
+
+colors
+display*, overlay*, visibility*, etc.
+positioning (top, bottom, etc)
+width*, height*
+position*
+margine, border, paddings
+font
+text
+extraneous
+transition
+*/
 a#open{
     background-color: transparent;
-    color:#ECB390; 
+    color: #ECB390; 
     display: block;
-    text-decoration: none;
-    font-size:75px;
     margin-left:20px;
+    font-size: 75px;
+    text-decoration: none;
     transition: color 0.5s;
 }
 a#open:hover{
-    color:#EB9B6A;
+    color: #EB9B6A;
 }
 
 nav{
     background-color: #3C3C3C;
     height: 100%;
     width: 0;
+    position: fixed;
     top: 0;
     left: 0;
-    position: fixed;
+    padding-top: 60px;
+    font-family: "Jost", Courier, monospace;
     z-index: 1;
     overflow-x: hidden;
-    padding-top: 60px;
     transition: width 0.5s;
-    font-family: "Jost", Courier, monospace;
 }
 nav a{
-    font-size:25px;
-    top: 0;
-    color:#FCF8E8;
+    color: #FCF8E8;
     display: block;
+    top: 0;
+    padding: 5px 0px 5px 20px;
+    font-size: 25px;
     text-decoration: none;
     white-space: nowrap;
-    padding: 5px 0px 5px 20px;
     transition: color 0.3s;
 }
 nav a#close{
-    font-size:75px;
     position: absolute;
     top: -15px;
     right: 25px;
     margin-left: 50px;
+    font-size: 75px;
 }
 nav a:hover{
-    color:#FFF1B9;
+    color: #FFF1B9;
 }
 nav a:active{
-    color:#ECB390;
+    color: #ECB390;
     transition: color 0s;
 }
 
 footer{
+    width: 300px;
+    position: absolute;
     bottom: 120px;
     left: -22px;
-    width: 300px;
     padding: 20px 0px;
-    position: absolute;
     overflow: hidden;
 }
 footer a{
-    padding-left: 4px;
-    margin: 5px;
     display: inline;
+    margin: 5px;
+    padding-left: 4px;
 }
 footer .social{
     display: inline;
@@ -69,41 +83,30 @@ footer .social{
 }
 footer .social img{
     display: inline-block;
+    width: auto;
+    height: 50px;
     position: absolute;
     top: 15px;
     left: 30px;
-    width: auto;
-    height: 50px;
 }
 footer p{
+    color: #FCF8E8;
     position: relative;
     text-align: center;
-    color:#FCF8E8;
 }
 
 /* Eric helped me with the idea of opacity and overlapping images.*/
-.idle{
+.idle{ opacity: 100; }
+.active{ opacity: 0; }
+.idle, .active{
     position: relative;
-    opacity: 100;
     transition-property: height, opacity, top, left;
     transition-duration: .3s, .5s, .2s, .2s;
     transition-timing-function: ease;
 }
-.active{
-    position: relative;
-    opacity: 0;
-    transition-property: height, opacity, top, left;
-    transition-duration: .3s, .5s, .2s, .2s;
-    transition-timing-function: ease;
-}
-footer .social:hover .idle{
-    opacity: 0;
-    height: 58px;
-    top: 11px;
-    left: 26px;
-}
-footer .social:hover .active{
-    opacity: 100;
+footer .social:hover .idle{ opacity: 0; }
+footer .social:hover .active{ opacity: 100; }
+footer .social:hover .idle, footer .social:hover .active{
     height: 58px;
     top: 11px;
     left: 26px;
