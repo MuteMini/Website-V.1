@@ -37,7 +37,7 @@ nav a{
 nav a#close{
     font-size:75px;
     position: absolute;
-    top: 0;
+    top: -15px;
     right: 25px;
     margin-left: 50px;
 }
