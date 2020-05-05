@@ -111,9 +111,9 @@ nav footer p{
     transition-duration: .3s, .5s, .2s, .2s;
     transition-timing-function: ease;
 }
-nav footer .social:hover .idle{ opacity: 0; }
-nav footer .social:hover .active{ opacity: 100; }
-nav footer .social:hover .idle, footer .social:hover .active{
+.social:hover .idle{ opacity: 0; }
+.social:hover .active{ opacity: 100; }
+.social:hover .idle, .social:hover .active{
     height: 58px;
     top: 11px;
     left: 26px;
