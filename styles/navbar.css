@@ -73,16 +73,16 @@ nav .tutorial-dropdown{
     position: relative;
 }
 nav .tutorial-content{
-    background-color: rgb(49, 49, 49);
+    background-color: #313131;
     width: 250px;
-    min-height: 0;
     max-height: 0;
     position: absolute;
     opacity: 0;
-    transition: opacity 0.5s;
+    overflow-y: hidden;
+    transition: all 0.5s;
 }
 nav .tutorial-dropdown:hover .tutorial-content{
-    min-height: 400%;
+    max-height: 400%;
     opacity: 1;
 }
 
