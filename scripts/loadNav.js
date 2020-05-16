@@ -8,7 +8,15 @@ const code = '\
     <a href="index.html" id="index">Home</a>\
     <a href="about.html" id="about">About Me</a>\
     <a href="projects.html" id="project">Projects</a>\
-    <a href="tutorialMain.html" id="tutorialMain">Tutorials</a>\
+    <div class="tutorial-dropdown">\
+        <a href="tutorialMain.html" id="tutorialMain">Tutorials</a>\
+        <div class="tutorial-content">\
+            <a href="tutorialOOP.html" id="tutorialOOP">OOP</a>\
+            <a href="tutorialArrays.html" id="tutorialArrays">Array & ArrayList</a>\
+            <a href="tutorialSAS.html" id="tutorialSAS">Search & Sort</a>\
+            <a href="tutorialRecursion.html" id="tutorialRecursion">Recursion</a>\
+        </div>\
+    </div>\
     <footer>\
         <!-- Took inspiration from Erics website, uses two photos, hover, and opacity -->\
         <a href="https://dmoj.ca/user/MuteMini">\

@@ -31,6 +31,7 @@ a#open:hover{
 
 nav{
     background-color: #3C3C3C;
+    display: inline-block;
     height: 100%;
     width: 0;
     position: fixed;
@@ -65,7 +66,24 @@ nav a:hover{
 }
 nav a:active{
     color: #ECB390;
-    transition: color 0s;
+}
+
+nav .tutorial-dropdown{
+    display: block;
+    position: relative;
+}
+nav .tutorial-content{
+    background-color: rgb(49, 49, 49);
+    width: 250px;
+    min-height: 0;
+    max-height: 0;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+nav .tutorial-dropdown:hover .tutorial-content{
+    min-height: 400%;
+    opacity: 1;
 }
 
 nav footer{
