@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="styles/navbar.css"/>
         <script src="scripts/jquery.js"></script>
         <script src="scripts/loadNav.js"></script>
+        <script src="scripts/imgcarousel.js"></script>
     </head>
     <body>
         <div class="main-display">
@@ -20,13 +21,52 @@
             <div class="body">
                 <h2 class="text">This guy is Min Kang, a grade 10 student attending William Lyon Mackenzie.</h2>
                 <h2 class="text">He made this website/portfolio for his ICS class.</h2>
-                <h2 class="text">He has a great interest in puzzles, specifically solving or learning how to solve them.</h2>
+                <h2 class="text">He has a hobby of solving puzzle, so he is currently working on a puzzle game for his culminating assignment.</h2>
             </div>
             <div class="bottom-img"></div>
             <div class="bottom">
-                <h2 class="text">This guy is Min Kang, a grade 10 student attending William Lyon Mackenzie.</h2>
+                <h2 class="text">In school, Min in interested in physics, math, and computer science. He's not too much of an english guy.</h2>
+                <h2 class="text">Min has stepped on a frog. He thinks it's a good conversation starter, but that's debateable.</h2>
+                <h2 class="text">Min also takes some mediocre photos. Below are some of these photos.</h2>
+                <div class="carousel">
+                    <div class="img">
+                        <img src="images/carousel1.jpg" onclick="openModal(1);" alt="boat on a blue sea" style="width:100%">
+                    </div>
+                    <div class="img">
+                        <img src="images/carousel2.jpg" onclick="openModal(2);" alt="two people apart on a beach" style="width:100%">
+                    </div>
+                    <div class="img">
+                        <img src="images/carousel3.jpg" onclick="openModal(3);" alt="a shack near the ocean" style="width:100%">
+                    </div>
+                    <div class="img">
+                        <img src="images/carousel4.jpg" onclick="openModal(4);" alt="a great view of Jeju island" style="width:100%">
+                    </div>
+                    <div class="img">
+                        <img src="images/carousel5.jpg" onclick="openModal(5);" alt="people walking on a dark deck" style="width:100%">
+                    </div>
+                    <div class="img">
+                        <img src="images/carousel6.jpg" onclick="openModal(6);" alt="floating colorful umbrellas" style="width:100%">
+                    </div>
+                    <div class="img">
+                        <img src="images/carousel7.jpg" onclick="openModal(7);" alt="Two boats reshed on the shore" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="moveSlides(1)">&#10095;</a>
+                </div>
+                <div id="modal" class="modal">
+                    <img srcset="images/hcarousel1.jpg 3456w, images/hcarousel1_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel1.jpg" alt="Most of these pictures I took from a Korean island called Jeju. The waters are unrealistically blue I had to capture something with the water." class="modal-img" id="img1">
+                    <img srcset="images/hcarousel2.jpg 3456w, images/hcarousel2_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel2.jpg" alt="So this picture doesn't really work on a smaller screen. There's two people (that I don't know) standing on different sides of the frame. What I want to know is why they were so far away when taking a photo..." class="modal-img" id="img2">
+                    <img srcset="images/hcarousel3.jpg 3456w, images/hcarousel3_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel3.jpg" alt="Cool little place I found during Jeju touring. The grass was unintended and it probably ruined the picture a slight bit." class="modal-img" id="img3">
+                    <img srcset="images/hcarousel4.jpg 3456w, images/hcarousel4_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel4.jpg" alt="If you guessed already, this is also from Jeju. We were climbing a huge mountain when I decided 'Hey, I like the view!' So I stopped and took a quick photo while resting. I think the photo came out really good. Flat but looks intentional." class="modal-img" id="img4">
+                    <img srcset="images/hcarousel5.jpg 3456w, images/hcarousel5_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel5.jpg" alt="Now this photo is from my home town in Korea. I lived in this rural place for less than two years, but our family has been visiting it ever since. Although I haven't lived long there, I could tell you every single location in a 10km radius around the house." class="modal-img" id="img5">
+                    <img srcset="images/hcarousel6.jpg 3456w, images/hcarousel6_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel6.jpg" alt="My home town has a acting festival once every summer or so. They set up lights and decorate the main attraction with wonderful colors. This time, they set up floating umbrellas that I found were cool. Came out pretty cool in my oppinion." class="modal-img" id="img6">
+                    <img srcset="images/hcarousel7.jpg 3456w, images/hcarousel7_700.jpg 1445w" sizes="(min-width: 820px) 3456px, 1445px" src="images/hcarousel7.jpg" alt="Last photo in this collection. This was about a month before we'd be leaving Korea. I has a fun time going about and sightseeing things I've missed and things I've never seen. This photo was like a goodbye to Korea for me, all my memories contained in jpg format." class="modal-img" id="img7">
+                    <div id="caption"></div>
+                    <a class="close" onclick="closeModal()">&times;</a>
+                </div>
             </div>
         </div> 
         <div id="include-nav"></div>
+        <script>showSlides(1);</script>
     </body>
 </html>
