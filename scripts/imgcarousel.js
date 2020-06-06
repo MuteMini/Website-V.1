@@ -1,19 +1,28 @@
-var index = 1;
+var index = [];
 
-// Next/previous controls
-function moveSlides(n) {
-  showSlides(index += n);
+//sets up the index array
+function setIndex(n) {
+  for(i = 0; i < n; i++){
+    index.push(1);
+  }
 }
 
-function showSlides(n) {
+// Next/previous controls
+function moveSlides(n, num) {
+  showSlides(index[num-1] += n, num);
+  console.log(index[num-1]);
+}
+
+function showSlides(n, num) {
+  const className = "img carousel"+num;
   var i;
-  var slides = document.getElementsByClassName("img");
-  if (n > slides.length) {index = 1}
-  if (n < 1) {index = slides.length}
+  var slides = document.getElementsByClassName(className);
+  if (n > slides.length) {index[num-1] = 1}
+  if (n < 1) {index[num-1] = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  slides[index-1].style.display = "block";
+  slides[index[num-1]-1].style.display = "block";
 }
 
 function openModal(n) {
