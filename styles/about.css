@@ -5,44 +5,8 @@ nav a#about:hover{
     color:#F6D2A5
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.main-display{
-    display: absolute;
-    width: 100%;
-    height: auto;   
-    font-family: Muli, Geneva, sans-serif;
-}
-.main-display .text{
-    text-align: center;
-}
-.main-display h1{
-    color: #ECDFC8;
-    font-size: 46px;
-    font-weight: bold;
-}
-.main-display h2{
-    color: #D64B2C;
-    font-size: 24px;
-    font-weight: normal;
-}
-
-header{
-    background-color: #FCF8E8;
-    color: #DE7861;
-    display: block;
-    width: 100%;
-    font-size: 60px; 
-    font-weight: 400;
-    font-family: Jost, Geneva, sans-serif;
-    text-align: center;
-}
-
 main{
-    background: url("../images/about1_1100.jpg") no-repeat center center;
+    background: url("../images/about/about1_1100.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -63,7 +27,7 @@ main{
 }
 
 .bottom-img{
-    background: url("../images/about2.jpg") no-repeat center center fixed;
+    background: url("../images/about/about2.jpg") no-repeat center center fixed;
     background-size: cover;
     display: relative;
     width: 100%;
@@ -78,39 +42,6 @@ main{
     width: 100%;
     height: 750px;
     transition: height 0.1s ease;
-}
-
-.carousel{
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-}
-.carousel .img{
-    display: none;
-    margin: 10px;
-    cursor: pointer;
-}
-.prev, .next {
-    color: white;
-    width: auto;
-    position: absolute;
-    top: 50%;
-    padding: 16px;
-    margin: 10px;
-    margin-top: -30px;
-    border-radius: 0 6px 6px 0;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.6s ease;
-}
-.next {
-    right: 0;
-    border-radius: 6px 0 0 6px;
-}
-.prev:hover, .next:hover {
-    background-color: #00000088;
 }
 
 .modal {
@@ -163,7 +94,7 @@ main{
 }
 
 @media only screen and (min-width:1100px) {
-    main{ background-image: url("../images/about1.jpg"); }
+    main{ background-image: url("../images/about/about1.jpg"); }
 }
 @media only screen and (min-width:700px) {
     .body{ height: 250px; }

@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-display{
+    display: absolute;
+    width: 100%;
+    height: auto;   
+    font-family: Muli, Geneva, sans-serif;
+}
+.main-display .text{
+    text-align: center;
+}
+.main-display h1{
+    color: #ECDFC8;
+    font-size: 46px;
+    font-weight: bold;
+}
+.main-display h2{
+    color: #D64B2C;
+    font-size: 24px;
+    font-weight: normal;
+}
+.main-display h3{
+    color: #D64B2C;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+header{
+    background-color: #FCF8E8;
+    color: #DE7861;
+    display: block;
+    width: 100%;
+    font-size: 60px; 
+    font-weight: 400;
+    font-family: Jost, Geneva, sans-serif;
+    text-align: center;
+}
