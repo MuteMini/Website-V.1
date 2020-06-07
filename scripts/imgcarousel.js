@@ -30,7 +30,7 @@ function openModal(n) {
     var modal = document.getElementById("modal");
     var captionText = document.getElementById("caption");
     var imageClicked = document.getElementById(imgName);
-    modal.style.display = "flex";
+    modal.style.display = "block";
     imageClicked.style.display = "block";
     captionText.innerHTML = imageClicked.alt;
     setTimeout(() => { modal.style.opacity = 1; }, 100);
