@@ -44,6 +44,9 @@ main{
     transition: height 0.1s ease;
 }
 
+.carousel img{
+    cursor: pointer;
+}
 .modal {
     background-color: #00000066;
     display: none;

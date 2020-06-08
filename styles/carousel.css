@@ -6,9 +6,9 @@
 .carousel .img{
     display: none;
     margin: 10px;
-    cursor: pointer;
 }
 .prev, .next {
+    background-color: #00000055;
     color: white;
     width: auto;
     position: absolute;

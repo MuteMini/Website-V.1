@@ -12,7 +12,7 @@ body {
 .main-display .text{
     text-align: center;
 }
-.main-display h1{
+.main-display main h1{
     color: #ECDFC8;
     font-size: 46px;
     font-weight: bold;
