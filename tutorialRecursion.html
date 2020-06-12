@@ -16,22 +16,75 @@
             nav a#tutorialMain:hover, nav a#tutorialRecursion:hover{
                 color:#F6D2A5
             }
+            div#irl-recursion > a{
+                color: #D64B2C;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 26px;
+                transition: all 0.5s;
+            }
+            div#irl-recursion > a:hover{
+                color: #e0836e;
+                cursor: pointer;
+            }
         </style>
         <script src="scripts/jquery.js"></script>
         <script src="scripts/loadNav.js"></script>
+        <script src="scripts/recursion.js"></script>
     </head>
     <body>
         <div class="main-display">
             <header>Recursion</header>
         </div>
-        <h3 class="text">Recursion is the process of calling a function inside itself, either directly or indirectly.</h3>
-        <h4 class="text">Yep, here are some text. More text, and more text.</h4>
+        <h3 class="text">Recursion is the process of calling a function inside itself.</h3>
+        <h4 class="text">Usually, recursion is used to break up a problem into smaller and smaller pieces, until the smallest piece is directly solveable. This smallest piece is called the <strong>base condition.</strong></h4>
+        <h4 class="text">The rest of the code uses itself to get the call closer to the base case.</h4>
+        <h4 class="text"></h4>
         <div class="code-block">
-            <p class="text">code</p>
-            <p class="text">code</p>
-            <p class="text">code</p>
-            <p class="text">code</p>
+            <pre class="text">public int recursiveFactorial(int val) {
+    <b>//the base case, returns 1</b>    
+    if(val == 1) {
+        return 1;
+    }
+    <b>//if the base case is not fulfilled, calls the method with the factorial calculations</b>
+    else {
+        return val * recursiveFactorial(val-1);
+    }
+}</pre> 
         </div>
+        <h4 class="text">Recursion can be used <strong>directly or indirectly.</strong></h4>
+        <h4 class="text">A <em>direct recursion</em> means the function is called inside the very function itself.</h4>
+        <h4 class="text">An <em>indirect recursion</em> means the function is called outside of itself, but still loops back to the function.</h4>
+        <div class="code-block">
+            <pre class="text"><b>//direct recursion</b> 
+public int recursion() {
+    <b>...</b>    
+    recursion()
+}
+
+<b>//indirect recursion</b>
+public int recursion1() {
+    <b>...</b>    
+    recursion3()
+}
+public int recursion2() {
+    <b>...</b>    
+    recursion1()
+}
+public int recursion3() {
+    <b>...</b>    
+    recursion2()
+}</pre> 
+        </div>
+        <h4 class="text">Recursive functions can become very memory intensive. This is because the compiler takes each recursive call in a different place in memory. If written improperly, recursive functions can throw a Stack Overflow error.</h4>
+        <h4 class="text">Recursion can also be tailed or non-tailed. A recursive function being tailed allows the compiler to save on memory.</h4>
+        <div class="spacer"></div>
+        <div id="irl-recursion">
+            <a class="text" onclick="doRecursion();">Do you really want to see.... <strong>real life recursion?</strong></a>
+        </div>
+        <div class="spacer"></div>
         <div id="include-nav"></div>
     </body>
 </html>

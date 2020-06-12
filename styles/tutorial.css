@@ -2,19 +2,21 @@ body{
     background-color: #FCF8E8;
 }
 
+body > .text, div#irl-recursion > .text{
+    margin: 20px 40px;
+    font-family: Muli, Geneva, sans-serif;
+}
 h3.text{
     color: #D64B2C;
     display: block;
-    margin: 20px 100px;
     text-align: center;
-    font-family: Muli, Geneva, sans-serif;
     font-size: 32px;
 }
 h4.text{
-    color: #D64B2C;
+    color: #e9745a;
     text-align: center;
-    font-family: Muli, Geneva, sans-serif;
     font-size: 20px;
+    font-weight: 400;
 }
 
 .code-block{
@@ -28,14 +30,26 @@ h4.text{
     overflow: auto;
 }
 .code-block .text{
-    color: #82ff62;
+    color: #6ecc56;
     font-family: Consolas, monospace;
     padding: 0;
     margin: 0;
     margin-left: 10px;
     font-size: 16px;
 }
+.code-block .text b{
+    color: #737a71;
+    padding: 0;
+    margin: 0;
+    font-weight: inherit;
+}
+
+.spacer{
+    display: block;
+    height: 50px;
+}
 
 @media only screen and (min-width:900px) {
     .code-block{ width: 800px; }
+    body > .text{ margin: 20px 22vw; }
 }

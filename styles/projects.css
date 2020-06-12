@@ -28,9 +28,9 @@ main{
     display: block;
     width: 95%;
     height: auto;
-    border: 3px solid #686868;
+    border: 3px solid #c95c46;
     border-radius: 10px;
-    box-shadow: 0 0 20px 1px #686868;
+    box-shadow: 0 0 20px 1px #c95c46;
     margin: auto;
 }
 .body .text{
