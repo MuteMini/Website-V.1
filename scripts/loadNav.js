@@ -15,6 +15,7 @@ const code = '\
             <a href="tutorialArrays.html" id="tutorialArrays">Array & ArrayList</a>\
             <a href="tutorialSAS.html" id="tutorialSAS">Search & Sort</a>\
             <a href="tutorialRecursion.html" id="tutorialRecursion">Recursion</a>\
+            <a href="tutorialBiblio.html" id="tutorialBiblio">Bibliography</a>\
         </div>\
     </div>\
     <footer>\

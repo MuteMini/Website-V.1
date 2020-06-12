@@ -82,7 +82,7 @@ nav .tutorial-content{
     transition: all 0.5s;
 }
 nav .tutorial-dropdown:hover .tutorial-content{
-    max-height: 400%;
+    max-height: 500%;
     opacity: 1;
 }
 

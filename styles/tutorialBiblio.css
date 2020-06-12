@@ -1,0 +1,6 @@
+nav a#tutorialMain, nav a#tutorialBiblio{
+    color:#ECB390;
+}
+nav a#tutorialMain:hover, nav a#tutorialBiblio:hover{
+    color:#F6D2A5
+}

@@ -1,6 +1,89 @@
+body{
+    background-color: #FCF8E8;
+}
+
 nav a#tutorialMain{
     color:#ECB390;
 }
 nav a#tutorialMain:hover{
     color:#F6D2A5
+}
+
+.box{
+    text-decoration: none;
+    cursor: inherit;
+    box-shadow: 5px 5px 30px #999999;
+    transform: none;
+    transition: transform 0.5s ease;
+}
+.box:hover{
+    cursor: pointer;
+    transform: scaleX(1.1) scaleY(1.1);
+    -webkit-transform: scaleX(1.1) scaleY(1.1);
+}
+
+.box-text{
+    color: #ec6344;
+    font-family: Muli, Geneva, sans-serif;
+    transition: font-size 0.5s ease;
+}
+h1.box-text{
+    position: relative;
+    top: 10%;
+    font-size: 28px;
+    font-weight: 400;
+}
+p.box-text{
+    position: relative;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.flex{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.flex .tuts{
+    background-color: #9c9c9c;
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    border: 2px solid #9c9c9c;
+    border-radius: 25px;
+    margin: 35px 20px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+}
+.flex .tuts img{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    display: block;
+    width: 80%;
+    height: auto;
+} 
+
+.biblio{
+    background-color: #9c9c9c;
+    position: relative;
+    top: 60px;
+    display: block;
+    width: 75vw;
+    height: 100px;
+    border: 2px solid #9c9c9c;
+    border-radius: 25px;
+    margin: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+@media only screen and (min-width:800px) {
+    .biblio{ height: 150px; }
+    h1.box-text{ font-size: 46px; }
 }
