@@ -21,6 +21,146 @@
         <script src="scripts/loadNav.js"></script>
     </head>
     <body>
+        <div class="main-display">
+            <header>Sort &amp; Search</header>
+        </div>
+        <h3 class="text">Here are three common sorting algorithms:</h3>
+        <h4 class="text"><strong>Selection sort</strong> sorts by scanning through the unsorted portion of the array, the subarray, to find the minimum value. This minimum is then moved to the back of the subarray.</h4>
+        <h4 class="text">In <em>Big O notation</em>, insertion sort takes O(n&#178).</h4>
+        <div class="code-block">
+            <pre class="text">public int[] selection(int[] array) {
+
+    <b>//loops through the array to find unsorted subarrays.</b>
+    for(int i = 0; i &lt; array.length; i++) {
+
+        <b>//scans the array for the minimum value</b>
+        int min = array[i];
+        for(int j = i + 1; j &lt; array.length - 1; j++){
+            if(min &gt array[j]){
+                min = array[j];
+            }
+        }
+        
+        array[i] = min;
+    }
+
+    return array;
+}</pre> 
+        </div>
+        <h4 class="text"><strong>Insertion sort</strong> is a simple sorting algorithm where the array is scanned to find where a value would be placed. When this index is found, the value is placed and everything shifted. This occurs again until there is no more values to insert.</h4>
+        <h4 class="text">In <em>Big O notation</em>, insertion sort takes worst case O(n&#178), best case O(n).</h4>
+        <div class="code-block">
+            <pre class="text">public int[] insertion(int[] array) {
+
+    <b>//loops through until the array is completely sorted.</b>
+    for(int i = 0; i &lt; array.length; i++) {
+
+        int key = array[i];
+        int pos = i - 1;
+
+        <b>//goes through the rest of the array to see where the value of key must go.</b>
+        while(pos &lt;= 0 &amp;&amp; array[j] &lt; key){
+            array[j + 1] = array[j];
+            pos -= 1;
+        }
+
+        array[pos + 1] = key;
+    }
+
+    return array;
+}</pre> 
+        </div> 
+        <h4 class="text"><strong>Merge sort</strong> uses the divide and conquer approach to sorting arrays. It uses recursion to break up the array until each subarray has one value to look at. These values are ordered, then merge sort solves the recursion stack and stiches up all of the subarrays into one.</h4>
+        <h4 class="text">In <em>Big O notation</em>, merge sort takes worst, best, and average case O(n Log n).</h4>
+        <div class="code-block">
+            <pre class="text">public void merge(Integer[] array, int l, int r) {
+                
+    <b>//uses recursion to get two halfs of the array.</b>
+    if(r &gt; l){
+        int m = (l+r)/2;
+        merge(array, l, m);
+        merge(array, m+1, r);
+        int[] arr1 = Arrays.copyOfRange(array, l, m);
+        int[] arr2 = Arrays.copyOfRange(array, m+1, r+1);
+
+        <b>//putting the array together.</b>
+        int pos1 = 0;
+        int pos2 = 0;
+        int normIndex = l;
+        while (pos1 &lt; arr1.length && pos2 &lt; arr2.length { 
+
+            <b>//puts the left array index to the front if it is smaller than the right one.</b>
+            if (arr1[pos1] &lt;= arr2[pos2]) { 
+                array[normIndex] = arr1[pos1]; 
+                pos1++; 
+            } 
+
+            <b>//puts the right array index to the front if it is smaller than the left one.</b>
+            else { 
+                array[normIndex] = arr2[pos2]; 
+                pos2++; 
+            } 
+            normIndex++; 
+        } 
+
+        <b>//copying what may be left over from the sub arrays.</b>
+        while(pos1 &lt; arr1.length){
+            array[normIndex] = arr1[pos1]; 
+            pos1++; 
+            normIndex++; 
+        }
+        while(pos2 &lt; arr2.length){
+            array[normIndex] = arr2[pos2]; 
+            pos2++; 
+            normIndex++; 
+        }
+    }
+}</pre> 
+        </div>
+        <h3 class="text">Here are two common searching algorithms:</h3>
+        <h4 class="text"><strong>Sequential search</strong> looks at every single index of an array to find the value.</h4>
+        <h4 class="text">Time complexity in <em>Big O notation</em> is O(n), as every index of the array could be traversed in the worst case.</h4>
+        <div class="code-block">
+            <pre class="text">public void sequential(int[] array, int val) {
+      
+    <b>loops through the array to check if val exists.</b>
+    for(int i = 0; i &lt; array.length; i++){
+        if(array[i] == val){
+            return i;
+        }
+    }
+
+    <b>//returns this if the number was not found.</b>
+    return -1;
+}</pre> 
+        </div>
+        <h4 class="text"><strong>Binary search</strong> splits the array into half and finds the sub array that contains the value being searched for based on the middle point's value. This only works on a sorted array.</h4>
+        <h4 class="text">Time complexity in <em>Big O notation</em> is O(2) if implemented like such below:</h4>
+        <div class="code-block">
+            <pre class="text">public int binary(int[] array, int val) {
+
+    <b>//stores the values of the subarray being checked at.</b>
+    int l = 0;  int r = array.length - 1;
+    
+    <b>//uses an iterative approach to split up the array.</b>
+    while(l &lt;= r){
+        int m = (r-l)/2 + 2;
+        if(arr[m] == val){
+            return m;
+        }
+        else if(arr[m] &lt;= val){
+            l = m + 1;
+        }
+        else if(arr[m] &gt; val){
+            r = m - 1;
+        }
+    }
+
+    <b>//returns this if the number was not found.</b>
+    return -1;
+}</pre> 
+        </div>
+        <div class="spacer"></div>
         <div id="include-nav"></div>
     </body>
 </html>
