@@ -51,7 +51,8 @@ main{
     text-align: center;
 }
 .body h2{
-    padding: 10px 5px;
+    padding: 15px 5px 10px;
+    font-weight: bold !important;
 }
 .body .title a{
     color: #eb9f48;
