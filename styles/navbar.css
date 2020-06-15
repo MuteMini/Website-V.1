@@ -39,6 +39,7 @@ nav{
     left: 0;
     padding-top: 60px;
     font-family: Jost, Geneva, monospace;
+    box-shadow: 0 10px 30px #646464;
     z-index: 1;
     overflow-x: hidden;
     transition: width 0.5s;
