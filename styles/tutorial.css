@@ -19,6 +19,32 @@ h4.text{
     font-weight: 400;
 }
 
+.image{
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+.image img{
+    width: auto;
+    max-width: 100%;
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+}
+.image a{
+    color: #eb9f48;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+.image a:hover{
+    color: #e9745a;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .code-block{
     background-color: #414141;
     border: 10px solid #414141;
@@ -39,6 +65,12 @@ h4.text{
 }
 .code-block .text b{
     color: #737a71;
+    padding: 0;
+    margin: 0;
+    font-weight: inherit;
+}
+.code-block .text i{
+    color: #a9bda4;
     padding: 0;
     margin: 0;
     font-weight: inherit;

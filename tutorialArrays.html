@@ -21,6 +21,86 @@
         <script src="scripts/loadNav.js"></script>
     </head>
     <body>
+        <div class="main-display">
+            <header>Arrays &amp; Arraylists</header>
+        </div>
+        <h3 class="text">Arrays store multiples of variables</h3>
+        <h4 class="text">To put it clearly, <strong>Arrays</strong> give a way to store many different instances of a variable type into one variable name. They are consecutive memory locations that hold values of the same data type.</h4>
+        <div class="image">
+            <img src="images/tut/array1.jpg">
+            <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html">Image from Java Docs</a>
+        </div>
+        <h4 class="text">Each location is stored at an <em>index</em>, which in turn is called an array's <em>element</em>. An array starts at index 0.</h4>
+        <h4 class="text">To access an index, you use square brackets, and inside put the index number you want to access.</h4>
+        <div class="code-block">
+            <pre class="text"><b>//creates and sets the length of the array.</b>
+int[] array = new int[3];
+
+<b>//sets the values of the array.</b>
+array[0] = 13;
+array[1] = 56;
+array[2] = -2;
+
+<b>//accesses the index 1 of the int array.</b>
+System.out.println( array[1] );
+</pre> 
+        </div>
+        <h4 class="text">You can get the length of the array using:</h4>
+        <div class="code-block">
+            <pre class="text">array.length</pre>
+        </div>
+        <h3 class="text">Arrays can store Arrays</h3>
+        <h4 class="text">This is called a <strong>multidimentional array</strong>. You can think of the most basic multidimentional array as a matrix or a grid, filled with the variable type declared.</h4>
+        <h4 class="text">Now, the multidimentional array uses multiple indices, each referring to a different section of the array. You could think of multidimentional arrays like arrays that contain arrays that contain arrays, so on and so forth.<h4>
+        <div class="image">
+            <img src="images/tut/array2.jpg">
+            <a href="http://math.hws.edu/javanotes/c7/s5.html">Image from HWS Colleges</a>
+        </div>
+        <h4 class="text">Lets say you have a two dimentional array like:</h4>
+        <div class="code-block">
+            <pre class="text"><b>//creates and sets the length of the array.</b>
+int[][] array = new int[3][4];
+</pre> 
+        </div>
+        <h4 class="text">To access an element on the first array, and inside that array the fourth element, you would type:</h4>
+        <div class="code-block">
+            <pre class="text">System.out.println( array[1][3] );</pre> 
+        </div>
+        <h3 class="text">Arraylists, and it's flexibility</h3>
+        <h4 class="text">An <strong>Arraylist</strong> is a flexible and resizeable array. You can not modify the length of the arraylist, but you can add and remove elements easily.</h4>
+        <h4 class="text">To create an Arraylist in Java and manipulate it, you use:</h4>
+        <div class="code-block">
+            <pre class="text">import java.util.ArrayList; <b>//imports the class ArrayList for use</b>
+
+ArrayList&lt;Integer&gt; arraylist = new ArrayList&lt;Integer&gt;();
+
+arraylist.add(7); <b>//adds the integer 7 to index 0 of the arraylist</b> <i>[7]</i>
+arraylist.add(2); <b>//adds the integer 2 to index 1 of the arraylist</b> <i>[7, 2]</i>
+arraylist.add(5); <b>//adds the integer 5 to index 2 of the arraylist</b> <i>[7, 2, 5]</i>
+
+arraylist.remove(0); <b>//removes the integer at index 0.</b> <i>[2, 5]</i>
+arraylist.remove(0); <b>//removes the integer at index 0.</b> <i>[5]</i>
+
+arraylist.set(0, 100) <b>//alters the integer at index 0 to be 100</b> <i>[100]</i>
+
+System.out.println( arraylist.size() ); <b>//prints the length of the arraylist.</b> <i>1</i>
+
+arraylist.clear(); <b>//removes everything in the arraylist.</b> <i>[]</i>
+</pre> 
+        </div>
+        <h4 class="text">To change the type of variable the Arraylist holds, change the object inside &lt;   &gt;</h4>
+        <div class="code-block">
+            <pre class="text"><b>//a String arraylist</b>
+ArrayList&lt;String&gt; stringList = new ArrayList&lt;String&gt;();
+
+<b>//a Double arraylist</b>
+ArrayList&lt;Double&gt; doubleList = new ArrayList&lt;Double&gt;();
+
+<b>//an arraylist that stores objects that are an instance of Custom</b>
+ArrayList&lt;Custom&gt; CustomList = new ArrayList&lt;Custom&gt;(); 
+</pre> 
+        </div>
+        <div class="spacer"></div>
         <div id="include-nav"></div>
     </body>
 </html>
