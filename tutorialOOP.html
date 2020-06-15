@@ -21,6 +21,88 @@
         <script src="scripts/loadNav.js"></script>
     </head>
     <body>
+        <div class="main-display">
+            <header>Object Oriented Programming</header>
+        </div>
+        <h3 class="text">What is an Object?</h3>
+        <h4 class="text">In Java, an object is a instance of a class, which is a template for the object for it to set up variables and methods to attach to the object.</h4>
+        <h4 class="text">Objects have attributes (instance variables) and behaviours (methods). These objects can be compared to real world objects, hence the reason it is called "objects".</h4>
+        <h3 class="text">Inheritance</h3>
+        <h4 class="text">Objects can take attributes and behaviours of another class. This is called <strong>Inheritance.</strong></h4>
+        <div class="image">
+            <img src="images/tut/oop1.png">
+            <a href="https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/">Image from Geeks for Geeks</a>
+        </div>
+        <h4 class="text">The class supplying the attributes and behaviours is called the <em>superclass</em> and the one recieving it is called the <em>subclass</em>.</h4>
+        <h4 class="text">This allows similar objects to share the exact same variables and methods.</h4>
+        <h4 class="text">In Java, you inherit a class by using the <em>extends</em> keyword.</h4>
+        <div class="code-block">
+            <pre class="text">public class Min extends Person <b>//The class Min extends another class called Person.</b></pre> 
+        </div>
+        <h3 class="text">Polymorphism</h3>
+        <h4 class="text"><strong>Polymorphism</strong> is the action of having the same take performed in different ways through inheritance. Here is an example:</h4>
+        <div class="code-block">
+            <pre class="text">public class Fruit{
+    public void rot(){
+        System.out.println("oh no, i am rotting.");
+    }        
+}
+
+public class Banana extends Fruit{
+    public void rot(){
+        System.out.println("crap, now i am all mushy!");
+    }        
+}
+
+public class Strawberry extends Fruit{
+    public void rot(){
+        System.out.println("aww, i dont want to die...");
+    }        
+}
+</pre> 
+        </div>
+        <h4 class="text">Now, when each of these classes run the method rot, they all print out separate things. This is the basic of polymorphism, and it allows for interesting program management.</h4>
+        <h3 class="text">Abstraction</h3>
+        <h4 class="text">The user doesn't want to see every single gunk in your code. This is where <strong>abstraction</strong> comes into play.</h4>
+        <h4 class="text">Abstractions allow the programmer to hide away details, allowing you to focus on what the object does instead of it's implementation.</h4>
+        <h4 class="text">Abstractions can be achieved in two ways, through <em>abstract</em> classes or <em>interface</em>.</h4>
+        <h4 class="text">An abstract class allows the programmer to have a mix of abstraction, so that certain methods are hidden while others aren't.</h4>
+        <div class="code-block">
+            <pre class="text">public abstract class Country{ <b>//makes an abstract class</b>
+    
+    <b>/* Makes an abstract method; no method body is created.
+     * This means the class that extends this Country class must 
+     * code it's own checkMoney method.
+     */</b>
+    public abstract int checkMoney(); 
+    
+    <b>/* This method is not abstract; it has a method body. 
+     * It has not achieved full abstraction.
+     */</b>
+    public void goToWar(){
+        System.out.println("I AM GOING TO FIGHT!"); 
+    }        
+}
+</pre> 
+        </div>
+        <h4 class="text">A class that is an interface allows for 100% abstraction in its code. There cannot be any method bodies.</h4>
+        <div class="code-block">
+            <pre class="text">public interface class Country{ <b>//makes an abstract class</b>
+    
+    <b>/* Makes two method; no method body is created.
+     * Full abstraction has been achieved.
+     */</b>
+    public int checkMoney(); 
+
+    public void goToWar();
+}
+</pre> 
+        </div>
+        <h3 class="text">Encapsulation</h3>
+        <h4 class="text">In <strong>encapsulation</strong>, everything about a class is hidden outside of itself and the methods that inherit it.</h4>
+        <h4 class="text">Encapsulation can be achieved by setting all of the instance variables as private. Then, to access and change the variables of that class, you must make <em>accessor</em> and <em>mutator</em> methods.</h4>
+        <h3 class="text">So what was Object Oriented Programing again?</h3>
+        <h4 class="text">Object Oriented Programming is the idea of creating a program where these object connect together and talk to each other. It creates a web of connections, which in turn creates the program.</h4>
         <div id="include-nav"></div>
     </body>
 </html>

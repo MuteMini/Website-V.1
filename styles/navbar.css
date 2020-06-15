@@ -125,14 +125,11 @@ nav footer p{
 .active{ opacity: 0; }
 .idle, .active{
     position: relative;
-    transition-property: height, opacity, top, left;
-    transition-duration: .3s, .5s, .2s, .2s;
-    transition-timing-function: ease;
+    transition: all .5s ease;
 }
 .social:hover .idle{ opacity: 0; }
 .social:hover .active{ opacity: 100; }
 .social:hover .idle, .social:hover .active{
-    height: 58px;
-    top: 11px;
-    left: 26px;
+    transform: scaleX(1.2) scaleY(1.2);
+    -webkit-transform: scaleX(1.2) scaleY(1.2);
 }
