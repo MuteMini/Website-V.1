@@ -8,3 +8,36 @@ nav a#tutorialMain, nav a#tutorialBiblio{
 nav a#tutorialMain:hover, nav a#tutorialBiblio:hover{
     color:#F6D2A5
 }
+
+.links{
+    display: block;
+    font-family: Muli, Geneva, sans-serif;
+    text-align: center;
+}
+.links h3{
+    color: #D64B2C;
+    display: block;
+    text-shadow: 2px 2px 6px #daa381;
+    margin: 30px 0;
+    font-size: 44px;
+    font-weight: 300;
+}
+.links a{
+    color: #e9745a;
+    display: block;
+    text-decoration: none;
+    text-shadow: 3px 3px 5px #e7d4c8;
+    font-size: 25px;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+}
+.links a:hover{
+    color: #eb401a;
+    transform: scaleX(1.05) scaleY(1.05);
+    -webkit-transform: scaleX(1.05) scaleY(1.05);
+}
+
+.spacer{
+    display: block;
+    height: 50px;
+}
